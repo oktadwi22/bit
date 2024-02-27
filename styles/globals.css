@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: #EEEEEE;
+  background: #0F0E0E;
+}
+
+.glowbg {
+  border-radius: 32px;
+  background: linear-gradient(
+    170deg,
+    rgb(9 58 236 / 20%) 38.95%,
+    rgb(54 9 236 / 20%) 92.27%
+  );
+  filter: blur(95px);
+}
+
+.glowcard {
+  /* border-radius: 32px; */
+  background: linear-gradient(
+    170deg,
+    rgba(9, 32, 236, 0.116),
+    rgba(9, 100, 236, 0.2) 38.95%,
+    rgba(54, 9, 236, 0.247) 92.27%
+  );
+  /* filter: blur(95px); */
+}
+
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
